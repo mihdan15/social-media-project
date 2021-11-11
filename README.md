@@ -1,17 +1,19 @@
-<h1>FINAL PROJECT</h1>
+# **FINAL PROJECT**
 
-#Kelompok 20
-#Anggota Kelompok
+**<h2>Kelompok 20</h2>**
+
+**<h2>Anggota Kelompok</h2>**
 <ul>
 	<li>Anggota 1</li>
 	<li>Anggota 2</li>
 	<li>Anggota 3</li>
 </ul>
 
-#Tema Project
+**<h2>Tema Project</h2>**
 <p>Sosial Media</p>
 
-#ERD
-<img src="{{asset('img/ERD-Socmed.jpg')}}">
+**<h2>ERD</h2>**
+<img src="public/img/ERD-Socmed.png">
 
-#Link Video
+**<h2>Link Vidio</h2>**
+<p>Link Demo Website : <p>
