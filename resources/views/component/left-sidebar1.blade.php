@@ -1,7 +1,7 @@
 <div class="left">
     <a class="profile">
         <div class="profile-photo">
-            <img src="{{asset('template/images/profile-1.jpg')}}">
+            <img src="{{asset('sosmed/images/profile-1.jpg')}}">
         </div>
         <div class="handle">
             <h4>Diana Ayi</h4>
@@ -25,7 +25,7 @@
             <div class="notifications-popup">
                 <div>
                     <div class="profile-photo">
-                        <img src="{{asset('template/images/profile-2.jpg')}}">
+                        <img src="{{asset('sosmed/images/profile-2.jpg')}}">
                     </div>
                     <div class="notification-body">
                         <b>Keke Benjamin</b> accepted your friend request

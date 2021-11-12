@@ -14,13 +14,13 @@ Social Media
     </div>
     <div class="story">
         <div class="profile-photo">
-            <img src="{{asset('template/images/profile-9.jpg')}}">
+            <img src="{{asset('sosmed/images/profile-9.jpg')}}">
         </div>
         <p class="name">Lilla James/p>
     </div>
     <div class="story">
         <div class="profile-photo">
-            <img src="{{asset('tmplate/images/profile-10.jpg')}}">
+            <img src="{{asset('sosmed/images/profile-10.jpg')}}">
         </div>
         <p class="name">Winnie Hale</p>
     </div>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nokoSocial - Responsive Social Media Website Using HTML, CSS & JavaScript</title>
+    <title>@yield('judul')</title>
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{asset('sosmed/style.cs')}}s">
 </head>
 <body>
     <nav>
@@ -23,7 +23,7 @@
             <div class="create">
                 <label class="btn btn-primary" for="create-post">Create</label>
                 <div class="profile-photo">
-                    <img src="./images/profile-1.jpg">
+                    <img src="{{asset('sosmed/images/profile-1.jpg')}}">
                 </div>
             </div>
         </div>
@@ -32,26 +32,13 @@
     <!------------------------- MAIN -------------------------->
     <main>
         <div class="container">
-            <!--======================== LEFT ==========================-->
-
-            <!------------------- END OF LEFT -------------------->
-
-
-
-            <!--======================== MIDDLE ==========================-->
+            @include('component.left-sidebar')
             <div class="middle">
-                <!------------------- STORIES -------------------->
-                <!------------------------------- END OF FEEDS ------------------------------------>
+            @yield('content')
             </div>
-            <!--======================== END OF MIDDLE ==========================-->
-
-
-            <!--======================== RIGHT ==========================-->
             <div class="right">
-
-                </div>
+            @include('component.right-sidebar')
             </div>
-            <!--====================== END OF RIGHT ==========================-->
         </div>
     </main>
 
@@ -110,6 +97,6 @@
     </div>
 </div>
 
-<script src="./index.js"></script>
+<script src="{{asset('sosmed/index.js')}}"></script>
 </body>
 </html>
