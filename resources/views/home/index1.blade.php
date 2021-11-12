@@ -1,4 +1,4 @@
-@extends('master')
+@extends('master1')
 
 @section('judul')
 Social Media

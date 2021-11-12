@@ -32,12 +32,12 @@
     <!------------------------- MAIN -------------------------->
     <main>
         <div class="container">
-            @include('component.left-sidebar')
+            @include('component.left-sidebar1')
             <div class="middle">
             @yield('content')
             </div>
             <div class="right">
-            @include('component.right-sidebar')
+            @include('component.right-sidebar1')
             </div>
         </div>
     </main>
