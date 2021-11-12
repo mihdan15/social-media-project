@@ -19,7 +19,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
-        <div class="card flex-row my-5 border-0 shadow rounded-5 overflow-hidden">
+        <div class="card flex-row my-5 border-0 shadow rounded-5 overflow-hidden" style="border-radius: 2rem;">
           <div class="card-img-left d-none d-md-flex">
             <!-- Background image for card set in CSS! -->
           </div>
