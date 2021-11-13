@@ -17,8 +17,8 @@ class CreateFollowshipTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('followship_id');
-            $table->foreign('followship_id')->references('id')->on('followship')->onDelete('cascade');
+            $table->unsignedBigInteger('follower_id');
+            $table->foreign('follower_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

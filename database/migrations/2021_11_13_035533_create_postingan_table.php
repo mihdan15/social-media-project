@@ -16,8 +16,8 @@ class CreatePostinganTable extends Migration
         Schema::create('postingan', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('isi');
-            $table->string('post');
-            $table->unsignedBigInteger('user_id');
+            $table->string('gambar')->nullable();
+            $table->BigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
