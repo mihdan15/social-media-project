@@ -4,16 +4,16 @@
 
 **<h2>Anggota Kelompok</h2>**
 <ul>
-	<li>Anggota 1</li>
-	<li>Anggota 2</li>
-	<li>Anggota 3</li>
+	<li>Luqman</li>
+	<li>Mihdan Advani</li>
+	<li>Dewi Muliyati</li>
 </ul>
 
 **<h2>Tema Project</h2>**
 <p>Sosial Media</p>
 
 **<h2>ERD</h2>**
-<img src="public/img/ERD-Socmed.png">
+<img src="public/img/socialmedia-v1-1.png">
 
 **<h2>Link Vidio</h2>**
 <p>Link Demo Website : <p>
