@@ -19,10 +19,10 @@
             <span><i class="uil uil-home"></i></span><h3>Home</h3>
         </a>
         <a class="menu-item">
-            <span><i class="uil uil-compass"></i></span><h3>Explore</h3>
+            <span><i class="uil uil-compass"></i></span><h3>Followers</h3>
         </a>
         <a class="menu-item" id="notifications">
-            <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span><h3>Notifications</h3>
+            <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span><h3>Following</h3>
             <!-------------------- NOTIFICATION POPUP ---------------->
             <div class="notifications-popup">
                 <div>
@@ -83,13 +83,7 @@
             <!-------------------- END NOTIFICATION POPUP ---------------->
         </a>
         <a class="menu-item" id="messages-notification">
-            <span><i class="uil uil-envelope-alt"><small class="notification-count">6</small></i></span><h3>Messagse</h3>
-        <a class="menu-item" id="theme">
-            <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
-        </a>
-        <a class="menu-item">
-            <span><i class="uil uil-setting"></i></span><h3>Settings</h3>
-        </a>
+            <span><i class="uil uil-envelope-alt"><small class="notification-count">6</small></i></span><h3>Postingan</h3>
     </div>
     <!------------------- END OF SIDEBAR -------------------->
     @auth

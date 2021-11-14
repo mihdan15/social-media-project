@@ -36,9 +36,9 @@
             <div class="middle">
             @yield('content')
             </div>
-            <div class="right">
+            <!-- <div class="right">
             @include('component.right-sidebar1')
-            </div>
+            </div> -->
         </div>
     </main>
 
