@@ -14,11 +14,11 @@ class CreateFollowshipTable extends Migration
     public function up()
     {
         Schema::create('followship', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('followship_id');
-            $table->foreign('followship_id')->references('id')->on('followship')->onDelete('cascade');
+            $table->unsignedBigInteger('follower_id');
+            $table->foreign('follower_id')->references('id')->on('users')->onDelete('cascade');
+            $table->primary(['user_id','follower_id']);
             $table->timestamps();
         });
     }

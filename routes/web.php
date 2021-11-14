@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
@@ -28,4 +22,20 @@ Route::get('/profile', function () {
     return view('profil.profile');
 });
 
+
+//CRUD Profile
 Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+//CRUD Postingan
+Route::resource('Postingan','PostinganController');
+
+
+//CRUD Komen
+Route::resource('komen', 'KomenController')->only([
+    'store'
+]);
