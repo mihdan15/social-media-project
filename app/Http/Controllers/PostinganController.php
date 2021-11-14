@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Postingan;
 
 class PostinganController extends Controller
 {
@@ -23,7 +25,7 @@ class PostinganController extends Controller
      */
     public function create()
     {
-        //
+        return 'Hello';
     }
 
     /**

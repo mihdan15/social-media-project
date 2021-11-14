@@ -26,3 +26,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//CRUD Postingan
+Route::resource('Postingan','PostinganController');
