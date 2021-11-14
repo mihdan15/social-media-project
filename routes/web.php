@@ -14,23 +14,22 @@
 // Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::group(['middleware'=> ['auth']], function(){
+Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('home.index1');
     });
 
-    Route::get('/profile', function () {
-        return view('profil.profile');
-    });
-
-    //CRUD Profile
-    Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
-
 });
 
+Route::get('/profile', function () {
+    return view('profil.profile');
+});
+
+//CRUD Profile
+Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
 
 //CRUD Postingan
-Route::resource('Postingan','PostinganController');
+Route::resource('postingan','PostinganController');
 
 
 //CRUD Komen
