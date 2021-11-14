@@ -5,16 +5,14 @@ Social Media
 @endsection
 
 @section('content')
-<form class="create-post" action="/postingan" method="POST" enctype="multipart/form-data">
+<form action="/postingan" class="create-post"  method="POST" enctype="multipart/form-data">
     @csrf
     <div class="profile-photo">
         <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
     </div>
-    @auth
-        <input type="text" placeholder="What's on your mind,  {{ Auth::user()->name }}?" name="isi" id="isi" id="create-post">
+        <input type="text" placeholder="What's on your mind,  {{ Auth::user()->name }}?" name="isi" id="isi">
         <input type="file" class="form-control" name="gambar" id="gambar">
-    @endauth
-    <button type="submit" class="btn btn-primary"><i class="uil uil-fast-mail"></i></button>
+    <button type="submit" class="btn btn-primary">Send</button>
 </form>
 
 <!------------------- FEEDS --------------------->

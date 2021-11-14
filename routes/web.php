@@ -37,7 +37,7 @@ Route::put('/post/{id}/edit', 'PostController@update')->name('post.update')->mid
 Route::delete('/post/{id}/delete', 'PostController@destroy')->name('post.delete')->middleware('auth');
 
 //postingan
-Route::resource('postingan', 'PostinganController')->only(['store']);
+Route::resource('postingan', 'PostinganController')->only(['store'])->middleware('auth');;
 
 Route::post('/like', 'LikeController@index')->middleware('auth');
 

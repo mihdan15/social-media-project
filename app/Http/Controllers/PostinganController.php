@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\Auth;
 use App\Postingan;
 
 class PostinganController extends Controller
@@ -17,12 +17,12 @@ class PostinganController extends Controller
         ]);
 
         $namaGambar = time().'.'.$request->gambar->extension();
-        $request->poster->move(public_path('post'),$namaGambar);
+        $request->gambar->move(public_path('post'),$namaGambar);
 
         $postingan = new Postingan;
 
         $postingan->isi = $request->isi;
-        $postingan->user_id = $request->user_id;
+        $postingan->user_id = Auth::id();
         $postingan->gambar = $namaGambar;
 
         $postingan->save();
