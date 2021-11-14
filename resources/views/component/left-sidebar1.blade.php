@@ -1,7 +1,7 @@
 <div class="left">
     <a href="/profile" class="profile">
         <div class="profile-photo">
-            <img src="{{asset('sosmed/images/profile-1.jpg')}}">
+            <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
         </div>
         <div class="handle">
             @auth
@@ -25,7 +25,7 @@
             <div class="notifications-popup">
                 <div>
                     <div class="profile-photo">
-                        <img src="{{asset('sosmed/images/profile-2.jpg')}}">
+                        <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
                     </div>
                     <div class="notification-body">
                         <b>Keke Benjamin</b> accepted your friend request

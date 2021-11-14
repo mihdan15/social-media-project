@@ -1,7 +1,7 @@
                         <div class="left">
                                 <a class="profile">
                                     <div class="profile-photo">
-                                        <img src="{{asset('sosmed/images/profile-1.jpg')}}">
+                                        <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
                                     </div>
                                     <div class="handle">
                                         <h4>{{ Auth::user()->name }}</h4>
@@ -19,6 +19,6 @@
                             </a>
                             <a class="menu-item" id="theme">
                                 <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
-                            </a>                     
+                            </a>
                         </div>
                     </div>

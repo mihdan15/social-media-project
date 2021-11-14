@@ -14,7 +14,7 @@
                                         <p><b>Alamat</b> : {{$profile->alamat}}</p>
                                         <p><b>Umur</b> : {{$profile->umur}}</p>
                                         <p><b>Bio</b> : {{$profile->bio}}</p>
-                                        <p><b>Email</b> : {{$profile->user->email}}</p>                                        
+                                        <p><b>Email</b> : {{$profile->user->email}}</p>
                                     </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
 
                     <form class="create-post">
                         <div class="profile-photo">
-                            <img src="{{asset('sosmed/images/profile-1.jpg')}}">
+                            <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
                         </div>
                         @auth
                         <input type="text" placeholder="What's on your mind,{{ Auth::user()->name }}?" id="create-post">
@@ -39,7 +39,7 @@
                         <div class="head">
                             <div class="user">
                                 <div class="profile-photo">
-                                    <img src="{{asset('sosmed/images/profile-1.jpg')}}">
+                                    <img src="">
                                 </div>
                                 <div class="ingo">
                                     <h3>DIana Ayi</h3>

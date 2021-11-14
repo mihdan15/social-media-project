@@ -25,7 +25,7 @@
             <div class="create">
                 <label class="btn btn-primary" for="create-post">Create</label>
                 <div class="profile-photo">
-                    <img src="{{asset('sosmed/images/profile-1.jpg')}}">
+                    <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
                 </div>
             </div>
         </div>
