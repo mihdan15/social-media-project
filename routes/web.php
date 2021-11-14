@@ -22,3 +22,10 @@ Auth::routes();
 Route::get('/', function () {
     return view('home.index1');
 });
+
+
+Route::get('/profile', function () {
+    return view('profil.profile');
+});
+
+Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);

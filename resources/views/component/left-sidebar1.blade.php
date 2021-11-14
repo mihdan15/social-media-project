@@ -1,12 +1,14 @@
 <div class="left">
-    <a class="profile">
+    <a href="/profile" class="profile">
         <div class="profile-photo">
             <img src="{{asset('sosmed/images/profile-1.jpg')}}">
         </div>
         <div class="handle">
-            <h4>Diana Ayi</h4>
+            @auth
+            <h4>{{ Auth::user()->name }}</h4>
+            @endauth
             <p class="text-muted">
-                @dayi
+                -
             </p>
         </div>
     </a>
@@ -82,13 +84,6 @@
         </a>
         <a class="menu-item" id="messages-notification">
             <span><i class="uil uil-envelope-alt"><small class="notification-count">6</small></i></span><h3>Messagse</h3>
-        </a>
-        <a class="menu-item">
-            <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
-        </a>
-        <a class="menu-item">
-            <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
-        </a>
         <a class="menu-item" id="theme">
             <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
         </a>
@@ -97,5 +92,14 @@
         </a>
     </div>
     <!------------------- END OF SIDEBAR -------------------->
-    <label for="create-post" class="btn btn-primary">Create Post</label>
+    @auth
+    <label for="create-post" class="btn btn-primary"  href="{{ route('logout') }}"onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              <p>Log Out</p>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            </form>
+    </label>
+
+    @endauth
 </div>

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('judul')</title>
+    <title>Profil {{$profile->user->name}}</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="{{asset('sosmed/style.csS')}}">
+    <link rel="stylesheet" href="{{asset('sosmed/stylelog.css')}}">
 </head>
 <body>
     <nav>
@@ -32,12 +34,9 @@
     <!------------------------- MAIN -------------------------->
     <main>
         <div class="container">
-            @include('component.left-sidebar1')
+            @include('profil.left-profile')
             <div class="middle">
             @yield('content')
-            </div>
-            <div class="right">
-            @include('component.right-sidebar1')
             </div>
         </div>
     </main>

@@ -1,42 +1,4 @@
-<div class="stories">
-    <div class="story">
-        <div class="profile-photo">
-            <img src="./images/profile-20.jpg">
-        </div>
-        <p class="name">Your Story</p>
-    </div>
-    <div class="story">
-        <div class="profile-photo">
-            <img src="{{asset('template/images/profile-9.jpg')}}">
-        </div>
-        <p class="name">Lilla James/p>
-    </div>
-    <div class="story">
-        <div class="profile-photo">
-            <img src="{{asset('tmplate/images/profile-10.jpg')}}">
-        </div>
-        <p class="name">Winnie Hale</p>
-    </div>
-    <div class="story">
-        <div class="profile-photo">
-            <img src="{{asset('tmplate/images/profile-11.jpg')}}">
-        </div>
-        <p class="name">Daniel Bale</p>
-    </div>
-    <div class="story">
-        <div class="profile-photo">
-            <img src="{{asset('tmplate/images/profile-12.jpg')}}">
-        </div>
-        <p class="name">Jane Doe</p>
-    </div>
-    <div class="story">
-        <div class="profile-photo">
-            <img src="./images/profile-8.jpg">
-        </div>
-        <p class="name">Tina White</p>
-    </div>
-</div>
-<!------------------- END OF STORIES -------------------->
+
 <form class="create-post">
     <div class="profile-photo">
         <img src="./images/profile-1.jpg">
