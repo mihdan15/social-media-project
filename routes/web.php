@@ -32,6 +32,8 @@ Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update'
 Route::get('/post','PostController@index');
 Route::post('/post', 'PostController@store')->middleware('auth');
 
+//postingan
+Route::resource('postingan', 'PostinganController')->only(['store']);
 
 //CRUD Komen
 Route::resource('komen', 'KomenController')->only([

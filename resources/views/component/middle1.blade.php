@@ -1,7 +1,7 @@
 
 <form class="create-post">
     <div class="profile-photo">
-        <img src="./images/profile-1.jpg">
+        <img src="{{ Auth::user()->gravatar()}}" alt="{{Auth::user()->name}}">
     </div>
     <input type="text" placeholder="What's on your mind, Diana?" id="create-post">
     <input type="submit" value="Post" class="btn btn-primary">

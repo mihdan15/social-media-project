@@ -4,7 +4,7 @@
 
 **<h2>Anggota Kelompok</h2>**
 <ul>
-	<li>Luqman</li>
+	<li>Kharis Luqman</li>
 	<li>Mihdan Advani</li>
 	<li>Dewi Muliyati</li>
 </ul>

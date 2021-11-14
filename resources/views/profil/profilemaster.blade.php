@@ -15,9 +15,9 @@
 <body>
     <nav>
         <div class="container">
-            <h2 class="log">
-                nokoSocial
-            </h2>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <h4 class="log">Social Media</h2>
+            </a>
             <div class="search-bar">
                 <i class="uil uil-search"></i>
                 <input type="search" placeholder="Search for creators, inspirations, and projects">
