@@ -56,4 +56,8 @@ class User extends Authenticatable
     public function followship(){
         return $this->belongsToMany(User::class, 'follows', 'user_id', 'follower_id')->withTimestamps();
     }
+
+    public function likes(){
+        return $this->hasMany('App\Like');
+    }
 }

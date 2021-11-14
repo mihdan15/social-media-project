@@ -43,11 +43,37 @@
             <div class="panel-body">
                 {{ $post->body}}              
             </div>
-            <div class="panel-footer">
-                <a href="a" class="btn btn-link">Likes</a>
-                <a href="a" class="btn btn-link">Dislikes</a>
-                <a href="a" class="btn btn-link">Comments</a>
-            </div>
+            <div class="panel-footer" data-postid="{{ $post->id }}">
+                      @php
+                          $i = Auth::user()->likes()->count();
+                          $c = 1;
+                          $likeCount = $post->likes()->where('like', '=', true)->count();
+                          $dislikeCount = $post->likes()->where('like', '=', false)->count();
+                      @endphp
+                      @foreach (Auth::user()->likes as $like)
+                          @if ($like->post_id == $post->id)
+                              @if ($like->like)
+                                  <a href="#" class="btn btn-link like active-like">Like <span class="badge">{{ $likeCount }}</span></a>
+                                  <a href="#" class="btn btn-link like">Dislike <span class="badge">{{ $dislikeCount }}</span></a>
+                              @else
+                                  <a href="#" class="btn btn-link like">Like <span class="badge">{{ $likeCount }}</span></a>
+                                  <a href="#" class="btn btn-link like active-like">Dislike <span class="badge">{{ $dislikeCount }}</span></a>
+                              @endif
+                              @break
+                          @elseif ($i == $c)
+                              <a href="#" class="btn btn-link like">Like <span class="badge">{{ $likeCount }}</span></a>
+                              <a href="#" class="btn btn-link like">Dislike <span class="badge">{{ $dislikeCount }}</span></a>
+                          @endif
+                          @php
+                              $c++;
+                          @endphp
+                      @endforeach
+                      @if ($i == 0)
+                          <a href="#" class="btn btn-link like">Like <span class="badge">{{ $likeCount }}</span></a>
+                          <a href="#" class="btn btn-link like">Dislike <span class="badge">{{ $dislikeCount }}</span></a>
+                      @endif
+                      <a href="{{ route('post.show', [$post->id]) }}" class="btn btn-link">Comment</a>
+                  </div>
             <div class="panel-footer">
                 {{ $post->created_at }}
             </div>
