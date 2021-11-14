@@ -17,3 +17,4 @@
 
 **<h2>Link Vidio</h2>**
 <p>Link Demo Website : <p>
+<p>Link Aplikasi : https://projectsosmed-kel20.herokuapp.com</p>
