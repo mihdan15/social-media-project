@@ -21,4 +21,5 @@ class Postingan extends Model
     public function komen() {
         return $this->hasMany('App\Komen');
     }
+
 }

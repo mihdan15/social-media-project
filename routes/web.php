@@ -31,3 +31,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //CRUD Postingan
 Route::resource('Postingan','PostinganController');
+
+
+//CRUD Komen
+Route::resource('komen', 'KomenController')->only([
+    'store'
+]);
