@@ -33,12 +33,20 @@
         @foreach ($posts as $post)
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">
-                    {{ $post->title}}
-                </h1>                
+                <div class="panel-title">
+                <h2>{{ $post->user->name}}</h2>
+                </div>     
+                <div class="panel-title">
+                <h1>{{ $post->title}}</h1>
+                </div>                          
             </div>
             <div class="panel-body">
                 {{ $post->body}}              
+            </div>
+            <div class="panel-footer">
+                <a href="a" class="btn btn-link">Likes</a>
+                <a href="a" class="btn btn-link">Dislikes</a>
+                <a href="a" class="btn btn-link">Comments</a>
             </div>
             <div class="panel-footer">
                 {{ $post->created_at }}
