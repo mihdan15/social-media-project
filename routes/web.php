@@ -12,23 +12,21 @@
 */
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/', function () {
-    return view('home.index1');
-});
-
-
-Route::get('/profile', function () {
-    return view('profil.profile');
-});
-
-
-//CRUD Profile
-Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware'=> ['auth']], function(){
+    Route::get('/', function () {
+        return view('home.index1');
+    });
+
+    Route::get('/profile', function () {
+        return view('profil.profile');
+    });
+
+    //CRUD Profile
+    Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
+
+});
 
 
 //CRUD Postingan

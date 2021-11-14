@@ -14,7 +14,7 @@
                                         <p><b>Alamat</b> : {{$profile->alamat}}</p>
                                         <p><b>Umur</b> : {{$profile->umur}}</p>
                                         <p><b>Bio</b> : {{$profile->bio}}</p>
-                                        <p><b>Email</b> : {{$profile->user->email}}</p>
+                                        <p><b>Email</b> : {{$profile->user->email}}</p>                                        
                                     </div>
                             </div>
                         </div>

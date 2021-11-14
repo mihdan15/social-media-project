@@ -10,7 +10,7 @@ Social Media
         <img src="./images/profile-1.jpg">
     </div>
     @auth
-        <input type="text" placeholder="What's on your mind,{{ Auth::user()->name }}?" id="create-post">
+        <input type="text" placeholder="What's on your mind, {{ Auth::user()->name }}?" id="create-post">
     @endauth
     <input type="submit" value="Post" class="btn btn-primary">
 </form>

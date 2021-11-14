@@ -7,9 +7,7 @@
             @auth
             <h4>{{ Auth::user()->name }}</h4>
             @endauth
-            <p class="text-muted">
-                -
-            </p>
+
         </div>
     </a>
 
