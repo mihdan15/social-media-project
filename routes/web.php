@@ -28,8 +28,9 @@ Route::get('/profile', function () {
 //CRUD Profile
 Route::resource('profile', 'ProfileController')->only(['index', 'edit', 'update']);
 
-//CRUD Postingan
-Route::resource('postingan','PostinganController');
+//CRUD Post
+Route::get('/post','PostController@index');
+Route::post('/post', 'PostController@store')->middleware('auth');
 
 
 //CRUD Komen
